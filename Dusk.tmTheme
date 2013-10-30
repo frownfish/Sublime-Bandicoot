@@ -20,13 +20,13 @@
 				<key>lineHighlight</key>
 				<string>#3E3D32</string>
 				<key>selection</key>
-				<string>#211021</string>
+				<string>#452252</string>
 				<key>findHighlight</key>
 				<string>#FFE792</string>
 				<key>findHighlightForeground</key>
 				<string>#000000</string>
 				<key>selectionBorder</key>
-				<string>#222218</string>
+				<string>#AE11DC</string>
 				<key>activeGuide</key>
 				<string>#9D550FB0</string>
 
