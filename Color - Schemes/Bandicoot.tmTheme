@@ -16,17 +16,17 @@
 				<key>foreground</key>
 				<string>#F8F8F2</string>
 				<key>invisibles</key>
-				<string>#3B3A32</string>
+				<string>#3B8A32</string>
 				<key>lineHighlight</key>
-				<string>#3E3D32</string>
+				<string>#FF6500B0</string>
 				<key>selection</key>
-				<string>#452252</string>
+				<string>#AE81FF50</string>
 				<key>findHighlight</key>
 				<string>#FFE792</string>
 				<key>findHighlightForeground</key>
 				<string>#000000</string>
 				<key>selectionBorder</key>
-				<string>#AE11DC</string>
+				<string>#AE81FF</string>
 				<key>activeGuide</key>
 				<string>#9D550FB0</string>
 
