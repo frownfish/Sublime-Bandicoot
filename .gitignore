@@ -1,1 +1,3 @@
 Dusk.tmTheme.cache
+*.cache
+*.pyc
