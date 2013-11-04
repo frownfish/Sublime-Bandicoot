@@ -11,6 +11,13 @@ C = 'c'
 #     def run(self, edit):
 
 
+class ConvertMisraCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        self.view.run_command('convert_misra_types')
+        self.view.run_command('convert_misra_pnd_defs')
+        self.view.run_command('convert_misra_protect_pnd_defs')
+
+
 class ConvertMisraTypesCommand(sublime_plugin.TextCommand):
     # List of tuples because order matters, and ST2 uses py2.6 which does not
     # have OrderedDict built-in
@@ -48,9 +55,9 @@ class ConvertMisraPndDefsCommand(sublime_plugin.TextCommand):
         FILE_TYPE = os.path.splitext(FILE_PATH)[1][1:]
         PNDDEF_P = r'#define\s+([A-Z_0-9]+)\s+(\(?[\-0-9A-Fa-fxU]+\)?(?:\s+(?:<<|>>)\s+[\-0-9A-Fa-fxU]+\))?)'
         # PNDDEF_PRV_P = r'#else'
-        PNDDEF_REPL_P = '#ifdef __cplusplus\n    const INT32 {0} = {1};\n#else\n    #define {0} {1}\n#endif\n'
+        PNDDEF_REPL_P = '#ifdef __cplusplus\n    const INT32 {0} = {1};\n#else\n    #define {0} {1}\n#endif'
         if FILE_TYPE in (CPP,):
-            PNDDEF_REPL_P = 'const INT32 {0} = {1};\n'
+            PNDDEF_REPL_P = 'const INT32 {0} = {1};'
         regions = self.view.find_all(PNDDEF_P)
         edit = self.view.begin_edit()
         regions.reverse()
@@ -67,7 +74,7 @@ class ConvertMisraPndDefsCommand(sublime_plugin.TextCommand):
 
 
 # convert __[A-Z_0-9]__H style #defines to [A-Z_0-9]__H in *.h
-class ConvertMisraProtectPndDefs(sublime_plugin.TextCommand):
+class ConvertMisraProtectPndDefsCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         PNDDEF_P = r'#ifn?def\s+(__[a-zA-Z_0-9]+__H)'
         h = self.view.find(PNDDEF_P, 0)
