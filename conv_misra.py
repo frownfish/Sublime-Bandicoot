@@ -2,13 +2,11 @@ import os
 import re
 import sublime_plugin
 import sublime
+import json
 
 CPP = 'cpp'
 H = 'h'
 C = 'c'
-
-# class ConvertMisraCommand(sublime_plugin.TextCommand):
-#     def run(self, edit):
 
 
 class ConvertMisraCommand(sublime_plugin.TextCommand):
@@ -99,6 +97,50 @@ class ConvertMisraProtectPndDefsCommand(sublime_plugin.TextCommand):
 # switch protective #ifndef #endif order to have [A-Z_0-9]__H first and DEFCFG_DisplayObjectBox second
 
 
-# make parameters const
-r'line (\d+) - Note[952]: Parameter \'([\w\d_]+)\' (line 238) could be declared const \[MISRA C\+\+ Rule 7-1-1\]'
+class ConvertMisraConstCommand(sublime_plugin.TextCommand):
+    '''
+    make parameters const
+    need to find rule 7-1-1
+    '''
+    def run(self, edit):
+        _F = ["AuRACLE_EMS", "tools", "_results", "misra_by_file.json"]
+        _P = list(self.view.file_name().split(os.path.sep))
+        for _ in range(len(_P)):
+            a = _P.pop()
+            if a == _F[0]:
+                break
 
+        _P.extend(_F)
+        JSON_PATH = os.path.sep.join(_P)
+        JSON_FILE = open(JSON_PATH, 'r')
+        JSON_DICT = json.load(JSON_FILE)
+        JSON_FILE.close()
+        ERR_LIST = JSON_DICT.get(self.view.file_name(), [])
+        _PAT = r'Parameter \'([\w\d_]+)\' \(line (\d+)\)[^\n]*MISRA[^\n]*(7-1-1)'
+        PAT = re.compile(_PAT)
+        edits = []
+        for e in ERR_LIST:
+            m = PAT.search(str(e))
+            if m:
+                edits.append((m.group(1), int(m.group(2))))
+        full_region = sublime.Region(0, self.view.size())
+        regions = self.view.split_by_newlines(full_region)
+        print regions
+        self.view.begin_edit()
+        for v, n in edits:
+            old = self.view.substr(regions[n])
+            P = r'([\w\d_]+\s+%s)' % v
+            # print P
+            # print re.search(P, old)
+            new = re.sub(P, 'const \\1', old)
+            # print 'old: ', old
+            # print 'new: ', new
+            # self.view.replace(edit, regions[n], new)
+        self.view.end_edit(edit)
+        print len(regions)
+
+        # we now have a list of all the instances of MISRA 7-1-1
+        # need to filter on the active file
+
+    def is_enabled(self):
+        return (self.view.file_name() and (len(self.view.file_name()) > 0))
