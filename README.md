@@ -1,4 +1,3 @@
-
 =================
 
 # Sublime-Bandicoot
@@ -11,27 +10,28 @@ If you are a git user, the best way to install the theme and keep up to date is 
 
 ### Using Git
 
-Go to your Sublime Text 2 `Packages` directory and clone the theme repository using the command below:
+Go to your Sublime Text 2 `Packages` directory and clone the repository using the command below:
 
-    git clone https://github.com/frownfish/Sublime-Bandicoot.git "Color Scheme - Sublime-Bandicoot"
+    git clone https://github.com/frownfish/Sublime-Bandicoot.git "Sublime-Bandicoot"
 
 ### Download Manually
 
 * Download the files using the GitHub .zip download option
-* Unzip the files and rename the folder to `Color Scheme - Sublime-Bandicoot`
+* Unzip the files and rename the folder to `Sublime-Bandicoot`
 * Copy the folder to your Sublime Text 2 `Packages` directory
 
 ## Activating the theme
 
-To configure Sublime Text 2 to use the theme:
+To configure Sublime Text 2 to use the Bandicoot Color Scheme:
 
 * For Sublime Text 2 (Build 2174) and later - Open your User Settings Preferences file `Sublime Text 2 -> Preferences -> Settings - User`. For earlier builds - Open your User Global Settings Preferences file `Sublime Text 2 -> Preferences -> Global Settings - User`
-* Add (or update) your theme entry to be `"color_scheme": "Packages/Color Scheme - Sublime-Bandicoot/Dusk.tmTheme"`
+* Add (or update) your theme entry to be `"color_scheme": "Packages/Sublime-Bandicoot/Color - Schemes/Bandicoot.tmTheme"`
 
 ### Example User Settings
 
     {
-        "color_scheme": "Packages/Color Scheme - Sublime-Bandicoot/Dusk.tmTheme"
+        "color_scheme": "Packages/Sublime-Bandicoot/Color - Schemes/Bandicoot.tmTheme"
     }
     
+
 Thanks to Josh for the template!
