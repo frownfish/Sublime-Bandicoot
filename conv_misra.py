@@ -36,10 +36,10 @@ class ConvertMisraTypesCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         edit = self.view.begin_edit()
         for t in self.MISRA_TYPES:
-            regions = self.view.find_all('(?:\W){0}'.format(t[0]))
+            regions = self.view.find_all('(?:\W){0}(?:\W)'.format(t[0]))
             regions.reverse()
             for r in regions:
-                self.view.replace(edit, r, self.view.substr(r.begin()) + t[1])
+                self.view.replace(edit, r, self.view.substr(r.begin()) + t[1] + self.view.substr(r.end() - 1))
         self.view.end_edit(edit)
 
     def is_enabled(self):
