@@ -9,12 +9,12 @@ class SplitOnCommand(sublime_plugin.TextCommand):
         if split_char:
             le = '\n'
             edit = self.view.begin_edit()
-            for s in selections:
-                line = self.view.line(s)
-                pad = ' ' * (s.begin() - line.begin())
-                text = self.view.substr(s)
-                sects = [x.strip() for x in text.split(split_char)]
-                sects[1:] = [pad + x for x in sects[1:]]
-                new_text = (split_char+le).join(sects)
-                self.view.replace(edit, s, new_text)
+            for selection in selections:
+                current_line = self.view.line(selection)
+                padding = ' ' * (selection.begin() - current_line.begin())
+                text = self.view.substr(selection)
+                elements = [x.strip() for x in text.split(split_char)]
+                elements[1:] = [padding + x for x in elements[1:]]
+                new_text = (split_char + le).join(elements)
+                self.view.replace(edit, selection, new_text)
         self.view.end_edit(edit)
