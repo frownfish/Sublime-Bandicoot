@@ -363,7 +363,7 @@ A6E22E : Green
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#8B67CC</string>
+				<string>#66D0FF</string>
 			</dict>
 		</dict>
 		<dict>
@@ -374,7 +374,7 @@ A6E22E : Green
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#66D0FF</string>
+				<string>#8B67CC</string>
 			</dict>
 		</dict>
 		<dict>
@@ -396,45 +396,6 @@ A6E22E : Green
 			</dict>
 		</dict>
 <!--> Begin Markdown Color Scheme <-->
-		<dict>
-			<key>name</key>
-			<string>diff: deleted</string>
-			<key>scope</key>
-			<string>markup.deleted</string>
-			<key>settings</key>
-			<dict>
-				<key>background</key>
-				<string>#EAE3CA</string>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#e62100</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>diff: changed</string>
-			<key>scope</key>
-			<string>markup.changed</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#8B67CC</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>diff: inserted</string>
-			<key>scope</key>
-			<string>markup.inserted</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#66D0FF</string>
-			</dict>
-		</dict>
 		<dict>
 			<key>name</key>
 			<string>Markup: Heading</string>
