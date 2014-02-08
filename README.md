@@ -1,6 +1,6 @@
 =================
 
-# Sublime-Bandicoot
+# Bandicoot
 
 Syntax theme for Sublime Text 2.
 
@@ -12,12 +12,12 @@ If you are a git user, the best way to install the theme and keep up to date is 
 
 Go to your Sublime Text 2 `Packages` directory and clone the repository using the command below:
 
-    git clone https://github.com/frownfish/Sublime-Bandicoot.git "Sublime-Bandicoot"
+    git clone https://github.com/jkloo/Bandicoot.git "Bandicoot"
 
 ### Download Manually
 
 * Download the files using the GitHub .zip download option
-* Unzip the files and rename the folder to `Sublime-Bandicoot`
+* Unzip the files and rename the folder to `Bandicoot`
 * Copy the folder to your Sublime Text 2 `Packages` directory
 
 ## Activating the theme
@@ -25,12 +25,12 @@ Go to your Sublime Text 2 `Packages` directory and clone the repository using th
 To configure Sublime Text 2 to use the Bandicoot Color Scheme:
 
 * For Sublime Text 2 (Build 2174) and later - Open your User Settings Preferences file `Sublime Text 2 -> Preferences -> Settings - User`. For earlier builds - Open your User Global Settings Preferences file `Sublime Text 2 -> Preferences -> Global Settings - User`
-* Add (or update) your theme entry to be `"color_scheme": "Packages/Sublime-Bandicoot/Color - Schemes/Bandicoot.tmTheme"`
+* Add (or update) your theme entry to be `"color_scheme": "Packages/Bandicoot/Bandicoot.tmTheme"`
 
 ### Example User Settings
 
     {
-        "color_scheme": "Packages/Sublime-Bandicoot/Color - Schemes/Bandicoot.tmTheme"
+        "color_scheme": "Packages/Bandicoot/Bandicoot.tmTheme"
     }
     
 
