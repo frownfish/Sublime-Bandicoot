@@ -5,9 +5,9 @@
 	<key>author</key>
 	<string>Mark H. Morrison</string>
 	<key>comment</key>
-	<string>A widget theme for the UI components of the Nexus theme.</string>
+	<string>A widget theme for the UI components of the Bandicoot theme.</string>
 	<key>name</key>
-	<string>Nexus - Widget Theme</string>
+	<string>Bandicoot - Widget Theme</string>
 	<key>settings</key>
 	<array>
 		<dict>
