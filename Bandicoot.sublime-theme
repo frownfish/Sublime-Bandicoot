@@ -124,7 +124,8 @@
 	{
 		"class": "tab_label",
 		"parents": [{"class": "tab_control", "attributes": ["selected", "dirty"]}],
-		"settings": ["highlight_modified_tabs"]
+		"settings": ["highlight_modified_tabs"],
+		"fg": [255, 101, 0, 255]
 	},
 
 	//	- Tab buttons
