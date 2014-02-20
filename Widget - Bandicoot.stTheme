@@ -2,33 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>author</key>
-	<string>Mark H. Morrison</string>
-	<key>comment</key>
-	<string>A widget theme for the UI components of the Bandicoot theme.</string>
-	<key>name</key>
-	<string>Bandicoot - Widget Theme</string>
-	<key>settings</key>
-	<array>
-		<dict>
-			<key>settings</key>
-			<dict>
-				<key>background</key>
-				<string>#181818</string>
-				<key>caret</key>
-				<string>#F8F8F0</string>
-				<key>foreground</key>
-				<string>#F8F8F0</string>
-				<key>invisibles</key>
-				<string>#c7dce7</string>
-				<key>selection</key>
-				<string>#8B67CC20</string>
-				<key>selectionBorder</key>
-				<string>#8B67CC</string>
-				<key>fontSize</key>
-				<string>10</string>
-			</dict>
-		</dict>
-	</array>
+    <key>author</key>
+    <string>Mark H. Morrison</string>
+    <key>comment</key>
+    <string>A widget theme for the UI components of the Bandicoot theme.</string>
+    <key>name</key>
+    <string>Bandicoot - Widget Theme</string>
+    <key>settings</key>
+    <array>
+        <dict>
+            <key>settings</key>
+            <dict>
+                <key>background</key>
+                <string>#181818</string>
+                <key>caret</key>
+                <string>#F8F8F0</string>
+                <key>foreground</key>
+                <string>#F8F8F0</string>
+                <key>invisibles</key>
+                <string>#c7dce7</string>
+                <key>selection</key>
+                <string>#8B67CC20</string>
+                <key>selectionBorder</key>
+                <string>#8B67CC</string>
+                <key>fontSize</key>
+                <string>10</string>
+            </dict>
+        </dict>
+    </array>
 </dict>
 </plist>
