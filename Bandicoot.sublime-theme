@@ -55,7 +55,7 @@
 		//	- Hover tab state
 		"class": "tab_control",
 		"attributes": ["hover"],
-		"layer2.opacity": 1.0
+		"layer2.opacity": 0.5
 	},
 	{
 		//	- Active tab state

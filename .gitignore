@@ -1,3 +1,4 @@
 *.tmTheme.cache
 *.cache
 *.pyc
+*.sublime-workspace
