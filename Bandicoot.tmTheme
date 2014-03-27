@@ -9,19 +9,19 @@
         <dict>
             <!-->
 Colors:
-F8F8F0 : White
-89919E : Light Gray
-89919E : Medium Gray (this)
-000000 : Black
-9D550F : Brown
+#F8F8F0 : White
+#89919E : Light Gray
+#89919E : Medium Gray (this)
+#000000 : Black
+#9D550F : Brown
 
-e62100 : Red
-FF6500 : Orange
-E6DB74 : Yellow
-A6E22E : Green
-269186 : Teal
-66D0FF : Blue
-8B67CC : Purple
+#e62100 : Red
+#FF6500 : Orange
+#E6DB74 : Yellow
+#A6E22E : Green
+#269186 : Teal
+#66D0FF : Blue
+#8B67CC : Purple
             <-->
             <key>settings</key>
             <dict>
